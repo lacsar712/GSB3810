@@ -1,0 +1,50 @@
+<view class="page-wrap">
+  <view class="card hero-card">
+    <view class="hero-title">欢迎使用教务小程序</view>
+    <view class="hero-subtitle">下拉可刷新主页数据</view>
+
+    <view wx:if="{{loading}}" class="skeleton-wrap">
+      <view class="skeleton-line skeleton-title"></view>
+      <view class="skeleton-line"></view>
+      <view class="skeleton-line"></view>
+      <view class="skeleton-line skeleton-short"></view>
+    </view>
+
+    <view wx:else class="profile-grid">
+      <view class="profile-item">
+        <view class="label">姓名</view>
+        <view class="value">{{profile.student_name || '--'}}</view>
+      </view>
+      <view class="profile-item">
+        <view class="label">学号</view>
+        <view class="value">{{profile.student_no || '--'}}</view>
+      </view>
+      <view class="profile-item">
+        <view class="label">班级</view>
+        <view class="value">{{profile.class_name || '--'}}</view>
+      </view>
+      <view class="profile-item">
+        <view class="label">年级</view>
+        <view class="value">{{profile.grade || '--'}}</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="card action-card">
+    <view class="section-title">常用功能</view>
+    <button class="action-btn action-score" bindtap="goScores">
+      <text class="action-title">成绩查询</text>
+      <text class="action-desc">查看各科成绩与排名趋势</text>
+    </button>
+    <button class="action-btn action-notice" bindtap="goNotices">
+      <text class="action-title">通知公告</text>
+      <text class="action-desc">接收班级通知与学校消息</text>
+    </button>
+    <button class="action-btn action-behavior" bindtap="goBehavior">
+      <text class="action-title">在校表现</text>
+      <text class="action-desc">查看行为记录与分值变化</text>
+    </button>
+  </view>
+
+  <button class="btn-secondary logout-btn" bindtap="logout">退出登录</button>
+</view>

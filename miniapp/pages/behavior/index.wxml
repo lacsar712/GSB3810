@@ -1,0 +1,20 @@
+<view class="page-wrap">
+  <view class="card">
+    <view class="section-title">在校表现记录</view>
+    <button class="btn-primary" loading="{{loading}}" bindtap="loadBehaviors">刷新记录</button>
+
+    <view wx:if="{{loading}}" class="loading-strip">
+      <view class="loading-dot"></view>
+      <text>记录加载中...</text>
+    </view>
+
+    <view wx:if="{{items.length === 0}}" class="muted" style="margin-top: 18rpx;">暂无记录</view>
+
+    <view wx:for="{{items}}" wx:key="index" class="item-card">
+      <view class="item-title">{{item.title}}</view>
+      <view class="muted">类型：{{item.category}} | 日期：{{item.record_date}}</view>
+      <view class="item-desc">{{item.description}}</view>
+      <view class="item-score">分值变化：{{item.score_delta}}</view>
+    </view>
+  </view>
+</view>

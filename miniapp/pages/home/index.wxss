@@ -1,0 +1,140 @@
+button::after {
+  border: none;
+}
+
+.hero-card {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(145deg, #edf4ff 0%, #fff8f2 100%);
+  border: 2rpx solid #d9e4f7;
+}
+
+.hero-card::before {
+  content: '';
+  position: absolute;
+  width: 320rpx;
+  height: 320rpx;
+  right: -110rpx;
+  top: -120rpx;
+  border-radius: 50%;
+  background: rgba(52, 121, 245, 0.14);
+}
+
+.hero-title {
+  position: relative;
+  margin-bottom: 8rpx;
+  font-size: 38rpx;
+  font-weight: 700;
+  color: #1f3a71;
+}
+
+.hero-subtitle {
+  position: relative;
+  margin-bottom: 22rpx;
+  font-size: 24rpx;
+  color: #5e6f8f;
+}
+
+.profile-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12rpx;
+}
+
+.profile-item {
+  padding: 16rpx;
+  border-radius: 14rpx;
+  background: rgba(255, 255, 255, 0.75);
+  border: 2rpx solid rgba(216, 229, 246, 0.8);
+}
+
+.profile-item .label {
+  font-size: 22rpx;
+  color: #7a879f;
+}
+
+.profile-item .value {
+  margin-top: 6rpx;
+  font-size: 28rpx;
+  font-weight: 600;
+  color: #243c72;
+}
+
+.action-card {
+  margin-top: 18rpx;
+}
+
+.action-btn {
+  margin-top: 14rpx;
+  width: 100%;
+  border-radius: 18rpx;
+  min-height: 110rpx;
+  padding: 20rpx 24rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: left;
+}
+
+.action-title {
+  font-size: 30rpx;
+  font-weight: 700;
+}
+
+.action-desc {
+  margin-top: 6rpx;
+  font-size: 24rpx;
+}
+
+.action-score {
+  background: linear-gradient(135deg, #2f82ff 0%, #5eb1ff 100%);
+  color: #ffffff;
+}
+
+.action-notice {
+  background: linear-gradient(135deg, #fff3dc 0%, #ffe7be 100%);
+  color: #a55216;
+}
+
+.action-behavior {
+  background: linear-gradient(135deg, #e9f8ed 0%, #d6f0de 100%);
+  color: #1f7f46;
+}
+
+.logout-btn {
+  margin-top: 16rpx;
+}
+
+.skeleton-wrap {
+  position: relative;
+}
+
+.skeleton-line {
+  height: 28rpx;
+  margin-bottom: 12rpx;
+  border-radius: 999rpx;
+  background: linear-gradient(90deg, #e4eaf6 25%, #f5f8ff 50%, #e4eaf6 75%);
+  background-size: 200% 100%;
+  animation: skeleton-wave 1.2s linear infinite;
+}
+
+.skeleton-title {
+  width: 58%;
+  height: 34rpx;
+}
+
+.skeleton-short {
+  width: 70%;
+}
+
+@keyframes skeleton-wave {
+  0% {
+    background-position: 200% 0;
+  }
+
+  100% {
+    background-position: -200% 0;
+  }
+}

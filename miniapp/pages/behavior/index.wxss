@@ -1,0 +1,61 @@
+button::after {
+  border: none;
+}
+
+.item-card {
+  margin-top: 14rpx;
+  padding: 16rpx;
+  border: 2rpx solid #e4d9cb;
+  border-radius: 14rpx;
+  background: #fffdf9;
+}
+
+.item-title {
+  font-weight: 600;
+  margin-bottom: 8rpx;
+}
+
+.item-desc {
+  margin-top: 8rpx;
+  color: #495365;
+  line-height: 1.6;
+}
+
+.item-score {
+  margin-top: 6rpx;
+  color: #9f3723;
+}
+
+.loading-strip {
+  margin-top: 16rpx;
+  display: flex;
+  align-items: center;
+  gap: 12rpx;
+  color: #5d6f94;
+  font-size: 24rpx;
+}
+
+.loading-dot {
+  width: 18rpx;
+  height: 18rpx;
+  border-radius: 50%;
+  background: #3479f5;
+  animation: pulse-dot 1.1s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+  0% {
+    opacity: 0.35;
+    transform: scale(0.8);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+
+  100% {
+    opacity: 0.35;
+    transform: scale(0.8);
+  }
+}

@@ -1,0 +1,57 @@
+<view class="page-wrap">
+  <view class="card score-card">
+    <view class="score-head">
+      <view class="score-head-main">
+        <view class="section-title">成绩列表</view>
+        <view class="muted">支持下拉刷新，按科目查看成绩与排名。</view>
+      </view>
+      <button class="btn-primary refresh-btn" loading="{{loading}}" bindtap="loadScores">刷新成绩</button>
+    </view>
+
+    <view class="field-label">科目筛选</view>
+    <picker mode="selector" range="{{subjects}}" value="{{subjectIndex}}" bindchange="onSubjectChange">
+      <view class="input">{{subjects[subjectIndex]}}</view>
+    </picker>
+
+    <view wx:if="{{loading}}" class="loading-strip">
+      <view class="loading-dot"></view>
+      <text>成绩加载中...</text>
+    </view>
+
+    <view wx:if="{{scores.length === 0}}" class="muted empty-tip">暂无成绩数据</view>
+
+    <view wx:for="{{scores}}" wx:key="index" class="score-item">
+      <view class="score-row">
+        <view class="score-title">{{item.exam_name}} · {{item.subject}}</view>
+        <view class="rank-chip">第 {{item.rank || '--'}} 名</view>
+      </view>
+      <view class="muted">日期：{{item.exam_date}}</view>
+      <view class="score-value">{{item.score}} 分</view>
+    </view>
+  </view>
+
+  <view class="card trend-card">
+    <view class="section-title">成绩变化趋势</view>
+    <view class="muted">当前科目：{{subjects[subjectIndex]}}</view>
+
+    <view wx:if="{{subjects[subjectIndex] === '全部'}}" class="muted empty-tip">
+      请选择具体科目后查看趋势图
+    </view>
+
+    <view wx:elif="{{trendLoading}}" class="loading-strip">
+      <view class="loading-dot"></view>
+      <text>趋势图生成中...</text>
+    </view>
+
+    <view wx:else class="trend-canvas-wrap">
+      <canvas
+        class="trend-canvas"
+        canvas-id="trendCanvas"
+        style="width: {{canvasWidth}}px; height: {{canvasHeight}}px;"
+        width="{{canvasWidth}}"
+        height="{{canvasHeight}}"
+      ></canvas>
+      <view wx:if="{{trend.length === 0}}" class="muted empty-tip">暂无趋势数据</view>
+    </view>
+  </view>
+</view>

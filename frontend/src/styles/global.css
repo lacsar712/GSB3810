@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=ZCOOL+XiaoWei&display=swap');
+
+:root {
+  --bg-primary: #f6f7f1;
+  --bg-secondary: #fffdf9;
+  --bg-accent: #ebf1ff;
+  --text-primary: #1f2430;
+  --text-secondary: #5f6675;
+  --brand-main: #cf4a32;
+  --brand-soft: #fbe6de;
+  --brand-strong: #8f2618;
+  --line-color: #e8dccd;
+  --shadow-card: 0 16px 38px rgba(47, 45, 41, 0.1);
+  --radius-large: 18px;
+  --radius-medium: 12px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  margin: 0;
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  font-family: 'Outfit', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  color: var(--text-primary);
+  background: radial-gradient(circle at 0% 0%, #f6efe6 0%, #f2f7ff 46%, #f4f5ef 100%);
+}
+
+.page-title {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.page-subtitle {
+  margin: 6px 0 0;
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.card-shell {
+  background: linear-gradient(145deg, #fffefb 0%, #ffffff 60%, #fcf4ef 100%);
+  border: 1px solid var(--line-color);
+  border-radius: var(--radius-large);
+  box-shadow: var(--shadow-card);
+}
+
+.padded-card {
+  padding: 20px;
+}
+
+.custom-select .el-input__wrapper {
+  min-height: 40px;
+  border-radius: 10px;
+}
+
+.custom-input .el-input__wrapper {
+  min-height: 40px;
+  border-radius: 10px;
+}
+
+.fade-slide-enter-active {
+  transition: all 0.35s ease;
+}
+
+.fade-slide-leave-active {
+  transition: all 0.2s ease;
+}
+
+.fade-slide-enter-from,
+.fade-slide-leave-to {
+  opacity: 0;
+  transform: translateY(8px);
+}
+
+@media (max-width: 900px) {
+  .page-title {
+    font-size: 24px;
+  }
+}

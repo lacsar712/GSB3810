@@ -1,0 +1,19 @@
+<view class="page-wrap">
+  <view class="card">
+    <view class="section-title">家长 / 学生快捷登录</view>
+    <view class="muted">通过微信授权码与学号完成身份绑定</view>
+
+    <view class="field-label">登录身份</view>
+    <picker mode="selector" range="{{roleOptions}}" value="{{roleIndex}}" bindchange="onRoleChange">
+      <view class="input">{{roleOptions[roleIndex]}}</view>
+    </picker>
+
+    <view class="field-label">授权码</view>
+    <input class="input" placeholder="请输入授权码" value="{{form.code}}" bindinput="onCodeInput" />
+
+    <view class="field-label">学号</view>
+    <input class="input" placeholder="请输入学号" value="{{form.student_no}}" bindinput="onStudentNoInput" />
+
+    <button class="btn-primary" loading="{{loading}}" bindtap="handleLogin">进入系统</button>
+  </view>
+</view>

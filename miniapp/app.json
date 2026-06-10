@@ -1,0 +1,17 @@
+{
+  "pages": [
+    "pages/login/index",
+    "pages/home/index",
+    "pages/notices/index",
+    "pages/scores/index",
+    "pages/behavior/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "教务小程序",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,83 @@
+page {
+  min-height: 100%;
+  background: linear-gradient(180deg, #f7f9ff 0%, #fff7ef 100%);
+  color: #1f2430;
+  font-size: 28rpx;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.page-wrap {
+  padding: 28rpx;
+  box-sizing: border-box;
+}
+
+.card {
+  background: #ffffff;
+  border: 2rpx solid #eadbcd;
+  border-radius: 24rpx;
+  padding: 24rpx;
+  box-shadow: 0 12rpx 30rpx rgba(32, 35, 41, 0.08);
+  box-sizing: border-box;
+}
+
+.btn-primary {
+  margin-top: 20rpx;
+  width: 100%;
+  height: 84rpx;
+  line-height: 84rpx;
+  color: #fff;
+  background: #cf4a32;
+  border-radius: 16rpx;
+  font-size: 30rpx;
+  box-sizing: border-box;
+}
+
+.btn-secondary {
+  margin-top: 12rpx;
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  color: #a1331f;
+  background: #fff2e9;
+  border-radius: 16rpx;
+  font-size: 28rpx;
+  box-sizing: border-box;
+}
+
+.input {
+  display: block;
+  width: 100%;
+  height: 78rpx;
+  line-height: 78rpx;
+  border: 2rpx solid #e1d6c9;
+  border-radius: 14rpx;
+  padding: 0 20rpx;
+  margin-top: 10rpx;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.field-label {
+  margin-top: 14rpx;
+  color: #626b7d;
+  font-size: 26rpx;
+}
+
+.section-title {
+  font-weight: 600;
+  font-size: 34rpx;
+  margin: 0 0 12rpx;
+}
+
+.muted {
+  color: #737c90;
+  font-size: 24rpx;
+}
